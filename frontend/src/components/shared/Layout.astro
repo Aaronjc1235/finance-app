@@ -1,0 +1,47 @@
+---
+import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/astro/components';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} - Finance App</title>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <header class="bg-white shadow-sm border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <h1 class="text-xl font-bold text-gray-900">Finance App</h1>
+        </div>
+        
+        <nav class="flex items-center space-x-4">
+          <SignedOut>
+            <SignInButton>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                Iniciar Sesión
+              </button>
+            </SignInButton>
+          </SignedOut>
+          
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <slot />
+  </main>
+</body>
+</html>

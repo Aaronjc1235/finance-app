@@ -1,0 +1,41 @@
+---
+import Layout from '../../components/shared/Layout.astro';
+---
+
+<Layout title="Dashboard">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Resumen financiero -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">Balance Total</h3>
+      <p class="text-3xl font-bold text-green-600">$0</p>
+      <p class="text-sm text-gray-500">Próximamente con BKND</p>
+    </div>
+    
+    <!-- Ingresos del mes -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">Ingresos del Mes</h3>
+      <p class="text-3xl font-bold text-blue-600">$0</p>
+      <p class="text-sm text-gray-500">Enero 2025</p>
+    </div>
+    
+    <!-- Gastos del mes -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">Gastos del Mes</h3>
+      <p class="text-3xl font-bold text-red-600">$0</p>
+      <p class="text-sm text-gray-500">Enero 2025</p>
+    </div>
+  </div>
+  
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Próximas Funcionalidades</h2>
+    <div class="bg-white p-6 rounded-lg shadow">
+      <ul class="space-y-2 text-gray-600">
+        <li>✅ Autenticación con Clerk - Configurado</li>
+        <li>🔄 Integración con BKND - En progreso</li>
+        <li>📊 Gráficos y reportes</li>
+        <li>💳 Gestión de deudas</li>
+        <li>📱 Versión móvil</li>
+      </ul>
+    </div>
+  </div>
+</Layout>

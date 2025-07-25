@@ -1,0 +1,36 @@
+---
+import Layout from '../components/shared/Layout.astro';
+import { SignedIn, SignedOut } from '@clerk/astro/components';
+---
+
+<Layout title="Inicio">
+  <div class="text-center">
+    <SignedOut>
+      <div class="max-w-md mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Gestiona tus Finanzas Personales
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Controla tus gastos, gestiona tus deudas y alcanza tus metas financieras.
+        </p>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-4">Inicia sesión para comenzar</h3>
+        </div>
+      </div>
+    </SignedOut>
+    
+    <SignedIn>
+      <div class="max-w-md mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          ¡Bienvenido de vuelta!
+        </h2>
+        <a 
+          href="/dashboard" 
+          class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 inline-block"
+        >
+          Ir al Dashboard
+        </a>
+      </div>
+    </SignedIn>
+  </div>
+</Layout>
